@@ -1,0 +1,39 @@
+# # Question 1
+
+# In[20]:
+
+
+class bankAc():
+    def __init__(self,ownerName,balance):
+        self.owerName = ownerName
+        self.balance = balance
+    
+    def deposit(self,d):
+        self.balance += d
+        print("you have added"+str(d)+"to your accont")
+        print("your current bal is ",self.balance)
+        
+    def withdral(self,w):
+        if w>self.balance:
+            return "You have insuffficient balance"
+        else:
+            self.balance-=w
+            print("you withdral amount is "+str(w)+" your current bal is"+str(self.balance))
+
+
+# In[21]:
+
+
+ac =bankAc("mani",5000)
+
+
+# In[22]:
+
+
+ac.deposit(2000)
+
+
+# In[23]:
+
+
+ac.withdral(1000)
